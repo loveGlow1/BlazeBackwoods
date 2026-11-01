@@ -271,7 +271,7 @@
     .age-actions .decline { background: transparent; color: var(--cream); }
 
     @media (max-width: 760px) {
-      .nav { height: 72px; }
+      .nav { height: 72px !important; }
       .menu-toggle { display: block; }
       .nav-links {
         display: none;
@@ -300,10 +300,24 @@
       .store-section, .location { padding: 75px 0; }
       .store-feature { grid-template-columns: 1fr; }
       .store-feature-image { min-height: 270px; }
-      .map, .map iframe { min-height: 320px; height: 320px; }
+      .map, .map iframe { min-height: 320px; height: 320px !important; }
       .footer-row { flex-direction: column; text-align: center; }
     }
   </style>
+<style>/* Added automatically: grids collapse on a phone. The declarations above are
+   untouched — this applies only below 640px. */
+@media (max-width: 640px) {
+  .quick-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+}</style>
+<style>
+/* Added automatically after the build: guards, not styling. Each one prevents a
+   specific way a page pushes itself off the side of a phone. */
+img, svg, video, canvas, iframe { max-width: 100%; }
+img, video { height: auto; }
+pre, code, table { max-width: 100%; }
+pre { overflow-x: auto; }
+h1, h2, h3, h4, p, li, a, td, th, dd, dt, figcaption, blockquote { overflow-wrap: break-word; }
+</style>
 </head>
 <body>
   <div class="age-gate" id="ageGate">
@@ -376,7 +390,7 @@
           <p>Photography of the actual kiosk and its displayed Backwoods-branded products, provided for this website.</p>
         </div>
         <div class="store-feature">
-          <div class="store-feature-image" role="img" aria-label="Close-up of Backwoods-branded display at the kiosk"></div>
+          <div class="store-feature-image"><img src="https://esuatccbicekcohzgcvd.supabase.co/storage/v1/object/public/project-assets/4aa716ff-b259-4589-8c31-7abd94159e63/67ef7476-e616-4ac2-8011-8677b7615321.png" alt="Backwoods Honey Berry cigars pack" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="store-feature-copy">
             <div class="eyebrow">Store display</div>
             <h3>Visit the physical kiosk</h3>
@@ -401,7 +415,7 @@
           <div class="eyebrow">Contact & location</div>
           <h2>Come find the kiosk.</h2>
           <div class="detail"><small>Address</small><p>Paradise Road, Idogwari, Lifecamp 900108, Federal Capital Territory, Abuja, Nigeria.</p></div>
-          <div class="detail"><small>Phone</small><p><a href="tel:+2348168206369">0816 820 6369</a></p></div>
+          <div class="detail"><small>Phone</small><p><a class="button button-primary" href="tel:+2348168206369">Call the shop</a></p></div>
           <div class="detail"><small>Opening hours</small><p>Listed as opening at 8:00 AM on Monday. Please call to confirm the full weekly schedule.</p></div>
           <div class="detail"><small>Google Maps plus code</small><p>39J8+CR Abuja</p></div>
           <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=39J8%2BCR%20Abuja" target="_blank" rel="noopener">Get directions</a>
