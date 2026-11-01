@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Find the Backwoods tobacco kiosk on Paradise Road, Idogwari, Lifecamp, Abuja. Call for store hours and directions.">
+  <meta name="description" content="Find Blazewood backwood Enterprise kiosk on Paradise Road, Idogwari, Lifecamp, Abuja. Call for store hours and directions.">
   <meta name="theme-color" content="#171512">
-  <title>Backwoods Kiosk | Lifecamp, Abuja</title>
+  <title>Blazewood backwood Enterprise | Lifecamp, Abuja</title>
   <style>
     :root {
       --bg: #171512;
@@ -89,7 +89,7 @@
       background-image:
         linear-gradient(90deg, rgba(15,13,11,.96) 0%, rgba(15,13,11,.82) 43%, rgba(15,13,11,.27) 100%),
         linear-gradient(0deg, var(--bg) 0%, transparent 28%),
-        url("__HERO_IMAGE__");
+        url("https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=80");
       background-size: cover;
       background-position: center 48%;
     }
@@ -169,7 +169,7 @@
     }
     .about-photo {
       min-height: 470px;
-      background: url("__HERO_IMAGE__") center / cover no-repeat;
+      background: url("https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=1200&q=80") center / cover no-repeat;
       border: 1px solid rgba(255,255,255,.08);
     }
     .about-copy h2, .location-copy h2 {
@@ -198,7 +198,7 @@
     }
     .store-feature-image {
       min-height: 360px;
-      background: url("__DETAIL_IMAGE__") center / cover no-repeat;
+      background: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80") center / cover no-repeat;
     }
     .store-feature-copy {
       padding: clamp(28px, 5vw, 58px);
@@ -321,7 +321,7 @@
   <header class="site-header">
     <div class="container">
       <nav class="nav">
-        <a class="brand" href="#home">BACKWOODS <span>KIOSK</span></a>
+        <a class="brand" href="#home">BLAZEWOOD <span>BACKWOOD</span></a>
         <button class="menu-toggle" type="button" aria-label="Open navigation" onclick="toggleMenu()">☰</button>
         <div class="nav-links" id="navLinks">
           <a href="#home">Home</a>
@@ -339,7 +339,7 @@
       <div class="container">
         <div class="hero-content">
           <div class="eyebrow">Tobacco kiosk · Idogwari, Abuja</div>
-          <h1>Backwoods Kiosk<br><span>Lifecamp, Abuja.</span></h1>
+          <h1>Blazewood backwood<br><span>Enterprise.</span></h1>
           <p class="hero-copy">A local tobacco retail kiosk on Paradise Road, Idogwari. Find our location, view the shop and contact us directly for store information.</p>
           <div class="actions">
             <a class="button button-primary" href="#location">Find the kiosk</a>
@@ -422,37 +422,24 @@
 
   <footer>
     <div class="container footer-row">
-      <span>BACKWOODS KIOSK · IDOGWARI, ABUJA</span>
+      <span>BLAZEWOOD BACKWOOD ENTERPRISE · IDOGWARI, ABUJA</span>
       <span>Paradise Road, Lifecamp, FCT</span>
       <span>18+ only</span>
     </div>
   </footer>
 
   <script>
-    function confirmAge(confirmed) {
-      const gate = document.getElementById('ageGate');
-      if (confirmed) {
-        sessionStorage.setItem('ageConfirmed', 'true');
-        gate.style.display = 'none';
-      } else {
-        gate.innerHTML = '<div class="age-box"><h2>Access restricted</h2><p>You must be at least 18 years old to continue.</p></div>';
-      }
-    }
-
-    if (sessionStorage.getItem('ageConfirmed') === 'true') {
-      document.getElementById('ageGate').style.display = 'none';
-    }
-
     function toggleMenu() {
       document.getElementById('navLinks').classList.toggle('open');
     }
 
-    document.querySelectorAll('.nav-links a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        document.getElementById('navLinks').classList.remove('open');
-      });
-    });
+    function confirmAge(isAdult) {
+      if (isAdult) {
+        document.getElementById('ageGate').style.display = 'none';
+      } else {
+        alert('You must be 18 or older to view this website.');
+      }
+    }
   </script>
 </body>
-</html>'''
-
+</html>
