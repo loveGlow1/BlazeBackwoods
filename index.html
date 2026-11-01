@@ -3,315 +3,523 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Blazewood Backwood Enterprise. Discover our brand and contact our store in Abuja.">
-<meta name="theme-color" content="#100D0B">
-<title>Blazewood Backwood Enterprise</title>
+<meta name="theme-color" content="#17130F">
+<meta name="description" content="Blazewood Backwood Enterprise — Abuja, Nigeria.">
+<title>Blazewood — Backwood Enterprise</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
 :root {
-  --bg:#100D0B;
-  --surface:#191410;
-  --surface2:#211A15;
-  --gold:#C3945C;
-  --cream:#F5EBDD;
-  --muted:#B5A697;
-  --line:rgba(255,255,255,.09);
-  --max:1200px;
+  --bg:#17130F;
+  --dark:#100D0A;
+  --panel:#211B16;
+  --brown:#493326;
+  --gold:#B99165;
+  --cream:#EDE2D3;
+  --muted:#A89A89;
+  --line:rgba(237,226,211,.13);
+  --max:1320px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
   background:var(--bg);
   color:var(--cream);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
+  font-family:'DM Sans',sans-serif;
+  overflow-x:hidden;
 }
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-.container{
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+button {
+  font:inherit;
+}
+
+img {
+  max-width:100%;
+  display:block;
+}
+
+.container {
   width:min(var(--max),90%);
   margin:auto;
 }
-/* NAVIGATION */
-header{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:10;
-  background:rgba(15,12,10,.7);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid var(--line);
+
+/* ANNOUNCEMENT */
+
+.announcement {
+  background:#261D16;
+  text-align:center;
+  padding:10px;
+  font-size:10px;
+  letter-spacing:2.5px;
+  color:#D6B894;
+  text-transform:uppercase;
 }
-nav{
-  height:82px;
+
+/* NAVIGATION */
+
+header {
+  position:absolute;
+  top:36px;
+  width:100%;
+  z-index:20;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+nav {
+  height:85px;
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
-.brand{
-  font-family:Georgia,serif;
-  font-size:23px;
+
+.brand {
+  font-family:'Playfair Display',serif;
+  font-size:25px;
   letter-spacing:1px;
-  font-weight:bold;
 }
-.brand span{color:var(--gold)}
-.nav-links{
+
+.brand span {
+  color:var(--gold);
+}
+
+.nav-links {
   display:flex;
   align-items:center;
-  gap:32px;
-  font-size:13px;
+  gap:35px;
 }
-.nav-links a:hover{color:var(--gold)}
-.nav-button{
-  border:1px solid var(--gold);
+
+.nav-links a {
+  font-size:12px;
+  color:#E0D5C7;
+  transition:.3s;
+}
+
+.nav-links a:hover {
   color:var(--gold);
-  padding:10px 18px;
 }
-.menu-toggle{
+
+.nav-contact {
+  border:1px solid var(--gold);
+  padding:12px 21px;
+  color:var(--gold)!important;
+}
+
+.menu-toggle {
   display:none;
   background:none;
   border:0;
   color:white;
-  font-size:27px;
+  font-size:28px;
   cursor:pointer;
 }
+
 /* HERO */
-.hero{
+
+.hero {
   min-height:850px;
+  position:relative;
   display:flex;
   align-items:center;
-  position:relative;
   overflow:hidden;
   isolation:isolate;
 }
-.hero::before{
+
+.hero::before {
   content:"";
   position:absolute;
   inset:0;
   z-index:-1;
   background:
-  linear-gradient(90deg,#100D0B 5%,rgba(16,13,11,.94) 40%,rgba(16,13,11,.35)),
-  linear-gradient(0deg,#100D0B,transparent 30%),
-  url("https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1800&q=85");
+    linear-gradient(90deg,
+      rgba(16,13,10,.98) 0%,
+      rgba(16,13,10,.84) 42%,
+      rgba(16,13,10,.18) 100%),
+    linear-gradient(0deg,var(--bg),transparent 30%),
+    url("https://esuatccbicekcohzgcvd.supabase.co/storage/v1/object/public/project-assets/4aa716ff-b259-4589-8c31-7abd94159e63/67ef7476-e616-4ac2-8011-8677b7615321.png");
+
   background-size:cover;
-  background-position:center;
-  opacity:.65;
+  background-position:center 45%;
+  transform:scale(1.02);
 }
-.hero-content{
-  max-width:700px;
-  padding:150px 0 100px;
+
+.hero-content {
+  max-width:760px;
+  padding-top:120px;
 }
-.eyebrow{
+
+.eyebrow {
   color:var(--gold);
-  font-size:10px;
-  letter-spacing:4px;
   text-transform:uppercase;
-  font-weight:bold;
-  margin-bottom:23px;
-}
-h1,h2,h3{
-  font-family:Georgia,'Times New Roman',serif;
-  font-weight:400;
-}
-h1{
-  font-size:clamp(55px,8vw,100px);
-  line-height:1.02;
-  letter-spacing:-2px;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:4px;
   margin-bottom:25px;
 }
-h1 span{color:var(--gold)}
-.hero-copy{
-  color:#D0C2B2;
-  font-size:15px;
-  max-width:480px;
-  margin-bottom:35px;
+
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(65px,9vw,115px);
+  font-weight:400;
+  line-height:.99;
+  letter-spacing:-3px;
+  margin-bottom:30px;
 }
-.actions{
+
+.hero h1 span {
+  color:var(--gold);
+  font-style:italic;
+}
+
+.hero-copy {
+  max-width:480px;
+  font-size:14px;
+  line-height:1.9;
+  color:#C6B9A9;
+  margin-bottom:38px;
+}
+
+.actions {
   display:flex;
   gap:14px;
   flex-wrap:wrap;
 }
-.button{
+
+.btn {
   display:inline-flex;
-  align-items:center;
   justify-content:center;
-  min-height:50px;
-  padding:14px 24px;
-  font-size:11px;
-  font-weight:bold;
+  align-items:center;
+  padding:16px 26px;
+  min-height:52px;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:1.7px;
   text-transform:uppercase;
-  letter-spacing:1.5px;
   transition:.3s;
 }
-.primary{
+
+.btn-primary {
   background:var(--gold);
-  color:#17110B;
+  color:#17110C;
 }
-.primary:hover{
-  background:#E0B77F;
+
+.btn-primary:hover {
+  background:#D4B38D;
   transform:translateY(-3px);
 }
-.outline{
+
+.btn-outline {
   border:1px solid rgba(255,255,255,.4);
 }
-.outline:hover{
+
+.btn-outline:hover {
   border-color:var(--gold);
   color:var(--gold);
 }
-/* BRAND STRIP */
-.brand-strip{
-  background:var(--surface);
-  border-block:1px solid var(--line);
-  padding:28px 0;
+
+/* BRAND STATEMENT */
+
+.statement {
+  padding:35px 0;
+  border-bottom:1px solid var(--line);
+  background:#1E1914;
 }
-.strip-grid{
+
+.statement-grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
-}
-.strip-item{
   text-align:center;
+}
+
+.statement-item {
   border-right:1px solid var(--line);
 }
-.strip-item:last-child{border:0}
-.strip-item small{
+
+.statement-item:last-child {
+  border:0;
+}
+
+.statement-item small {
   display:block;
   color:var(--gold);
-  text-transform:uppercase;
   font-size:9px;
   letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:7px;
 }
-.strip-item strong{
-  font-size:13px;
+
+.statement-item strong {
+  font-size:12px;
   font-weight:400;
 }
-/* BRAND INTRODUCTION */
-.about{
-  padding:120px 0;
+
+/* INTRODUCTION */
+
+.introduction {
+  padding:145px 0;
   display:grid;
   grid-template-columns:1fr 1fr;
   align-items:center;
-  gap:85px;
+  gap:100px;
 }
-.about-image{
+
+.intro-image {
   position:relative;
-  min-height:520px;
-  overflow:hidden;
-  background:#241A12;
 }
-.about-image img{
+
+.intro-image img {
   width:100%;
-  height:520px;
+  height:580px;
   object-fit:cover;
-  display:block;
 }
-.about-copy h2{
-  font-size:clamp(40px,5vw,65px);
-  line-height:1.1;
-  margin-bottom:25px;
+
+.intro-image::after {
+  content:"";
+  position:absolute;
+  inset:15px -15px -15px 15px;
+  border:1px solid rgba(185,145,101,.35);
+  z-index:-1;
 }
-.about-copy p{
-  color:var(--muted);
+
+.intro-copy h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(43px,5vw,70px);
+  line-height:1.12;
+  font-weight:400;
+  margin-bottom:28px;
+}
+
+.intro-copy h2 span {
+  color:var(--gold);
+  font-style:italic;
+}
+
+.intro-copy p {
   font-size:14px;
-  margin-bottom:20px;
-}
-/* FEATURED IMAGE */
-.featured{
-  padding:105px 0;
-  background:var(--surface);
-}
-.section-heading{
-  text-align:center;
-  max-width:650px;
-  margin:0 auto 55px;
-}
-.section-heading h2{
-  font-size:clamp(38px,5vw,58px);
-}
-.section-heading p{
+  line-height:2;
   color:var(--muted);
-  font-size:14px;
-  margin-top:15px;
-}
-.feature-card{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  background:#100D0B;
-  border:1px solid var(--line);
-  overflow:hidden;
-}
-.feature-image{
-  min-height:480px;
-  background:#251A12;
-}
-.feature-image img{
-  width:100%;
-  height:100%;
-  min-height:480px;
-  object-fit:cover;
-  display:block;
-}
-.feature-copy{
-  padding:55px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-.feature-copy h3{
-  font-size:40px;
-  margin-bottom:20px;
-}
-.feature-copy p{
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:25px;
-}
-/* VISIT */
-.visit{
-  padding:110px 0;
-  text-align:center;
-  background:
-  radial-gradient(ellipse at center,rgba(195,148,92,.10),transparent 65%);
-}
-.visit h2{
-  font-size:clamp(40px,6vw,65px);
   margin-bottom:18px;
 }
-.visit p{
-  color:var(--muted);
-  max-width:550px;
-  margin:0 auto 30px;
-  font-size:14px;
-}
-/* CONTACT */
-.contact{
-  padding:90px 0;
-  background:var(--surface);
+
+/* IMAGE BREAK */
+
+.image-break {
+  min-height:560px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(16,12,9,.60),rgba(16,12,9,.78)),
+    url("https://esuatccbicekcohzgcvd.supabase.co/storage/v1/object/public/project-assets/4aa716ff-b259-4589-8c31-7abd94159e63/67ef7476-e616-4ac2-8011-8677b7615321.png") center/cover;
 }
-.contact h2{
-  font-size:clamp(38px,5vw,55px);
-  margin-bottom:15px;
+
+.image-break-content {
+  max-width:700px;
+  padding:40px 20px;
 }
-.contact p{
+
+.image-break h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(45px,7vw,85px);
+  font-weight:400;
+  line-height:1.1;
+  margin-bottom:22px;
+}
+
+.image-break h2 span {
+  color:var(--gold);
+  font-style:italic;
+}
+
+.image-break p {
+  color:#D3C5B5;
+  font-size:13px;
+  line-height:1.9;
+}
+
+/* BRAND GALLERY */
+
+.gallery-section {
+  padding:120px 0;
+  background:#211A15;
+}
+
+.section-heading {
+  text-align:center;
+  max-width:680px;
+  margin:0 auto 65px;
+}
+
+.section-heading h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,5vw,65px);
+  font-weight:400;
+  margin-bottom:18px;
+}
+
+.section-heading p {
   color:var(--muted);
-  margin-bottom:25px;
-  font-size:14px;
+  font-size:13px;
+  line-height:1.9;
 }
+
+.gallery {
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:20px;
+}
+
+.gallery-main {
+  height:560px;
+  overflow:hidden;
+  background:#30251C;
+}
+
+.gallery-main img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .8s;
+}
+
+.gallery-main:hover img {
+  transform:scale(1.04);
+}
+
+.gallery-side {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:35px 10px 35px 35px;
+}
+
+.gallery-side h3 {
+  font-family:'Playfair Display',serif;
+  font-size:39px;
+  font-weight:400;
+  margin-bottom:20px;
+}
+
+.gallery-side p {
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
+}
+
+.gallery-label {
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+/* BRAND QUOTE */
+
+.brand-quote {
+  padding:130px 20px;
+  text-align:center;
+  background:var(--dark);
+}
+
+.brand-quote .eyebrow {
+  margin-bottom:30px;
+}
+
+.brand-quote h2 {
+  max-width:900px;
+  margin:auto;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(35px,5.5vw,68px);
+  font-weight:400;
+  line-height:1.25;
+}
+
+.brand-quote h2 span {
+  color:var(--gold);
+  font-style:italic;
+}
+
+/* CONTACT */
+
+.contact {
+  padding:115px 0;
+  text-align:center;
+  background:
+    radial-gradient(ellipse at center,rgba(185,145,101,.13),transparent 70%);
+}
+
+.contact h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(43px,6vw,75px);
+  font-weight:400;
+  margin-bottom:20px;
+}
+
+.contact p {
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:32px;
+}
+
+.contact-details {
+  margin-top:35px;
+  color:var(--gold);
+  font-size:13px;
+}
+
 /* FOOTER */
-footer{
-  padding:30px 0;
+
+footer {
+  padding:35px 0;
   border-top:1px solid var(--line);
+  background:#100D0A;
+}
+
+.footer-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-brand {
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+}
+
+.footer-brand span {
+  color:var(--gold);
+}
+
+.footer-row p {
   color:var(--muted);
   font-size:11px;
 }
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:20px;
-}
+
 /* AGE VERIFICATION */
-.age-gate{
+
+.age-gate {
   position:fixed;
   inset:0;
   z-index:100;
@@ -319,309 +527,529 @@ footer{
   align-items:center;
   justify-content:center;
   padding:20px;
-  background:rgba(10,8,7,.97);
+  background:rgba(10,8,6,.97);
 }
-.age-box{
-  width:min(430px,100%);
+
+.age-box {
+  width:min(440px,100%);
   padding:45px 30px;
   text-align:center;
   background:#211A15;
   border:1px solid var(--gold);
 }
-.age-box h2{
-  font-size:35px;
+
+.age-box h2 {
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  font-weight:400;
   margin-bottom:15px;
 }
-.age-box p{
-  color:var(--muted);
+
+.age-box p {
   font-size:13px;
+  color:var(--muted);
   margin-bottom:25px;
 }
-.age-actions{
+
+.age-actions {
   display:flex;
   justify-content:center;
   gap:12px;
 }
-.age-actions button{
-  padding:12px 18px;
+
+.age-actions button {
+  padding:13px 18px;
   border:1px solid var(--gold);
   background:var(--gold);
+  color:#17110C;
   cursor:pointer;
-  font-size:12px;
+  font-size:11px;
 }
-.age-actions .decline{
+
+.age-actions .decline {
   background:transparent;
   color:white;
 }
-/* MOBILE */
-@media(max-width:760px){
-  nav{height:72px}
-  .menu-toggle{display:block}
-  .nav-links{
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+
+  .introduction {
+    gap:55px;
+  }
+
+  .gallery {
+    grid-template-columns:1fr;
+  }
+
+  .gallery-side {
+    padding:30px 5px;
+    gap:25px;
+  }
+
+}
+
+@media(max-width:760px) {
+
+  header {
+    top:36px;
+  }
+
+  nav {
+    height:72px;
+  }
+
+  .menu-toggle {
+    display:block;
+  }
+
+  .nav-links {
     display:none;
     position:absolute;
     top:72px;
     left:0;
     right:0;
-    padding:25px 5%;
-    background:#191410;
+    padding:28px 5%;
+    background:#19130F;
     flex-direction:column;
     align-items:flex-start;
-    gap:22px;
-    border-bottom:1px solid var(--line);
+    gap:23px;
   }
-  .nav-links.open{display:flex}
-  .hero{min-height:760px}
-  .hero-content{padding-top:140px}
-  h1{font-size:clamp(48px,13vw,70px)}
-  .strip-grid{
+
+  .nav-links.open {
+    display:flex;
+  }
+
+  .hero {
+    min-height:760px;
+  }
+
+  .hero::before {
+    background-position:58% center;
+  }
+
+  .hero h1 {
+    font-size:clamp(58px,13vw,85px);
+  }
+
+  .statement-grid {
     grid-template-columns:1fr;
-    gap:18px;
+    gap:20px;
   }
-  .strip-item{
+
+  .statement-item {
     border:0;
-    padding:8px;
   }
-  .about{
+
+  .introduction {
     grid-template-columns:1fr;
-    gap:40px;
-    padding:80px 0;
+    padding:85px 0;
+    gap:55px;
   }
-  .about-image,
-  .about-image img{
-    min-height:350px;
-    height:350px;
+
+  .intro-image img {
+    height:400px;
   }
-  .feature-card{
-    grid-template-columns:1fr;
+
+  .image-break {
+    min-height:430px;
   }
-  .feature-image,
-  .feature-image img{
-    min-height:330px;
-    height:330px;
+
+  .gallery-section {
+    padding:85px 0;
   }
-  .feature-copy{padding:32px}
-  .featured{padding:75px 0}
-  .footer-row{
+
+  .gallery-main {
+    height:400px;
+  }
+
+  .brand-quote {
+    padding:90px 20px;
+  }
+
+  .contact {
+    padding:85px 0;
+  }
+
+  .footer-row {
     flex-direction:column;
     text-align:center;
   }
+
 }
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{
+
+@media(max-width:420px) {
+
+  .brand {
+    font-size:19px;
+  }
+
+  .hero h1 {
+    font-size:53px;
+  }
+
+  .actions {
+    flex-direction:column;
+  }
+
+  .actions .btn {
+    width:100%;
+  }
+
+  .gallery-main {
+    height:320px;
+  }
+
+  .age-actions {
+    flex-direction:column;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto}
+  *,*::before,*::after {
     animation:none!important;
     transition:none!important;
   }
 }
 </style>
 </head>
+
 <body>
+
 <!-- AGE CONFIRMATION -->
+
 <div class="age-gate" id="ageGate">
   <div class="age-box">
     <div class="eyebrow">Age confirmation</div>
-    <h2>Are you 18 or older?</h2>
-    <p>This website relates to tobacco products. Confirm your age before continuing.</p>
+    <h2>Welcome to Blazewood.</h2>
+    <p>This website relates to tobacco products. Confirm that you meet the applicable legal age requirement before continuing.</p>
     <div class="age-actions">
-      <button onclick="confirmAge(true)">Yes, I am 18+</button>
-      <button class="decline" onclick="confirmAge(false)">No</button>
+      <button onclick="confirmAge(true)">I meet the age requirement</button>
+      <button class="decline" onclick="confirmAge(false)">Exit</button>
     </div>
   </div>
 </div>
-<!-- HEADER -->
+
+<!-- ANNOUNCEMENT -->
+
+<div class="announcement">
+  BLAZEWOOD BACKWOOD ENTERPRISE · ABUJA, NIGERIA
+</div>
+
+<!-- NAVIGATION -->
+
 <header>
   <div class="container">
     <nav>
+
       <a href="#home" class="brand">
-        BLAZEWOOD <span>BACKWOOD</span>
+        BLAZEWOOD <span>BACKWOOD.</span>
       </a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <button class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-label="Toggle navigation">☰</button>
+
       <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
-        <a href="#about">Our Brand</a>
-        <a href="#featured">Collection</a>
+        <a href="#about">Our Story</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
-        <a href="tel:+2348168206369" class="nav-button">Contact Us</a>
+        <a href="tel:+2348168206369" class="nav-contact">Get In Touch</a>
       </div>
+
     </nav>
   </div>
 </header>
+
 <main>
+
 <!-- HERO -->
+
 <section class="hero" id="home">
+
   <div class="container">
     <div class="hero-content">
+
       <div class="eyebrow">
         Blazewood Backwood Enterprise
       </div>
+
       <h1>
-        A Distinctive<br>
-        <span>Brand Identity.</span>
+        An Identity<br>
+        Beyond <span>Ordinary.</span>
       </h1>
+
       <p class="hero-copy">
-        Welcome to Blazewood Backwood Enterprise.
-        Discover our brand, explore our presentation
-        and connect with our business in Abuja.
+        Discover Blazewood Backwood Enterprise.
+        A distinctive retail brand based in Abuja,
+        Nigeria, bringing its own character and
+        visual identity to the retail experience.
       </p>
+
       <div class="actions">
-        <a href="#featured" class="button primary">
-          Discover Our Brand
+        <a href="#about" class="btn btn-primary">
+          Discover Blazewood
         </a>
-        <a href="#contact" class="button outline">
-          Get In Touch
+
+        <a href="#contact" class="btn btn-outline">
+          Contact Us
         </a>
       </div>
+
     </div>
   </div>
+
 </section>
-<!-- BUSINESS DETAILS -->
-<section class="brand-strip">
-  <div class="container strip-grid">
-    <div class="strip-item">
-      <small>Business</small>
-      <strong>Blazewood Backwood Enterprise</strong>
+
+<!-- BRAND INFORMATION -->
+
+<section class="statement">
+  <div class="container statement-grid">
+
+    <div class="statement-item">
+      <small>Established Identity</small>
+      <strong>Blazewood Enterprise</strong>
     </div>
-    <div class="strip-item">
-      <small>Location</small>
+
+    <div class="statement-item">
+      <small>Based In</small>
       <strong>Abuja, Nigeria</strong>
     </div>
-    <div class="strip-item">
-      <small>Contact</small>
+
+    <div class="statement-item">
+      <small>Business Enquiries</small>
       <strong>0816 820 6369</strong>
     </div>
+
   </div>
 </section>
-<!-- ABOUT -->
-<section class="container about" id="about">
-  <div class="about-image">
+
+<!-- OUR STORY -->
+
+<section class="container introduction" id="about">
+
+  <div class="intro-image">
     <img
       src="https://esuatccbicekcohzgcvd.supabase.co/storage/v1/object/public/project-assets/4aa716ff-b259-4589-8c31-7abd94159e63/67ef7476-e616-4ac2-8011-8677b7615321.png"
       alt="Backwoods product packaging"
-      loading="lazy"
-    >
+      loading="lazy">
   </div>
-  <div class="about-copy">
-    <div class="eyebrow">Our Business</div>
+
+  <div class="intro-copy">
+
+    <div class="eyebrow">The Blazewood Identity</div>
+
     <h2>
-      Welcome to<br>
-      Blazewood.
+      Rooted in<br>
+      <span>Distinctive Style.</span>
     </h2>
+
     <p>
-      Blazewood Backwood Enterprise is an Abuja-based
-      retail business with a distinctive identity
-      and focus on Backwoods-branded products.
+      Blazewood Backwood Enterprise is an
+      Abuja-based retail business with a
+      distinctive identity and focus on
+      Backwoods-branded products.
     </p>
+
     <p>
-      Explore our brand presentation and contact
-      our business directly for general information.
+      Our website presents the brand,
+      its visual identity and business
+      information in one place.
     </p>
-    <a href="#contact" class="button primary">
-      Contact Our Business
+
+    <a href="#contact" class="btn btn-primary">
+      Get In Touch
     </a>
+
   </div>
+
 </section>
-<!-- FEATURED BRAND IMAGE -->
-<section class="featured" id="featured">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Brand Presentation</div>
-      <h2>Blazewood Collection</h2>
-      <p>
-        A closer look at the Backwoods-branded
-        packaging associated with our business.
-      </p>
+
+<!-- CINEMATIC IMAGE SECTION -->
+
+<section class="image-break">
+
+  <div class="image-break-content">
+
+    <div class="eyebrow">
+      Blazewood · Abuja
     </div>
-    <div class="feature-card">
-      <div class="feature-image">
+
+    <h2>
+      Character.<br>
+      Identity. <span>Presence.</span>
+    </h2>
+
+    <p>
+      Introducing the visual world of
+      Blazewood Backwood Enterprise.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery-section" id="gallery">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">Visual Collection</div>
+
+      <h2>The Blazewood Gallery</h2>
+
+      <p>
+        A closer look at the product packaging
+        associated with our business.
+      </p>
+
+    </div>
+
+    <div class="gallery">
+
+      <div class="gallery-main">
         <img
           src="https://esuatccbicekcohzgcvd.supabase.co/storage/v1/object/public/project-assets/4aa716ff-b259-4589-8c31-7abd94159e63/67ef7476-e616-4ac2-8011-8677b7615321.png"
-          alt="Backwoods Honey Berry packaging"
-          loading="lazy"
-        >
+          alt="Backwoods product packaging"
+          loading="lazy">
       </div>
-      <div class="feature-copy">
-        <div class="eyebrow">Blazewood Enterprise</div>
-        <h3>Our Brand. Our Identity.</h3>
-        <p>
-          Discover the visual identity of
-          Blazewood Backwood Enterprise.
-          For business enquiries and general
-          information, reach us directly.
-        </p>
-        <a href="tel:+2348168206369" class="button primary">
-          Contact Business
+
+      <div class="gallery-side">
+
+        <div>
+          <div class="gallery-label">
+            Blazewood Enterprise
+          </div>
+
+          <h3>
+            A closer look at our brand.
+          </h3>
+
+          <p>
+            Explore our visual presentation
+            and connect with our business
+            for general information.
+          </p>
+        </div>
+
+        <a href="#contact" class="btn btn-outline">
+          Business Information
         </a>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+<!-- BRAND STATEMENT -->
+
+<section class="brand-quote">
+
+  <div class="eyebrow">Blazewood Backwood Enterprise</div>
+
+  <h2>
+    A distinctive name.<br>
+    A memorable <span>identity.</span>
+  </h2>
+
+</section>
+
 <!-- CONTACT -->
-<section class="visit">
-  <div class="container">
-    <div class="eyebrow">Based in Abuja, Nigeria</div>
-    <h2>Blazewood Backwood Enterprise.</h2>
-    <p>
-      Get in touch with our business for
-      general information and enquiries.
-    </p>
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=39J8%2BCR%20Abuja"
-      target="_blank"
-      rel="noopener"
-      class="button primary"
-    >
-      View Business Location
-    </a>
-  </div>
-</section>
+
 <section class="contact" id="contact">
+
   <div class="container">
-    <div class="eyebrow">Contact Blazewood</div>
+
+    <div class="eyebrow">
+      Contact Blazewood
+    </div>
+
     <h2>Let's Connect.</h2>
+
     <p>
       For general business enquiries,
-      contact us directly.
+      contact our business directly.
     </p>
-    <a href="tel:+2348168206369" class="button primary">
-      0816 820 6369
+
+    <a href="tel:+2348168206369"
+       class="btn btn-primary">
+      Call 0816 820 6369
     </a>
+
+    <div class="contact-details">
+      Paradise Road, Idogwari, Lifecamp,<br>
+      Abuja, Federal Capital Territory, Nigeria.
+    </div>
+
   </div>
+
 </section>
+
 </main>
+
 <!-- FOOTER -->
+
 <footer>
+
   <div class="container footer-row">
-    <span>BLAZEWOOD BACKWOOD ENTERPRISE</span>
-    <span>Paradise Road, Idogwari, Lifecamp, Abuja</span>
-    <span>18+ Only</span>
+
+    <div class="footer-brand">
+      BLAZEWOOD <span>BACKWOOD.</span>
+    </div>
+
+    <p>
+      Paradise Road, Lifecamp, Abuja.
+    </p>
+
+    <p>
+      © <span id="year"></span> Blazewood Backwood Enterprise.
+    </p>
+
   </div>
+
 </footer>
+
 <script>
-function toggleMenu(){
-  document.getElementById('navLinks').classList.toggle('open');
+
+function toggleMenu() {
+  document.getElementById('navLinks')
+    .classList.toggle('open');
 }
-document.querySelectorAll('.nav-links a').forEach(link=>{
-  link.addEventListener('click',()=>{
-    document.getElementById('navLinks').classList.remove('open');
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navLinks')
+      .classList.remove('open');
   });
 });
-function confirmAge(isAdult){
-  if(isAdult){
+
+function confirmAge(accepted) {
+
+  if (accepted) {
     sessionStorage.setItem('blazewoodAgeConfirmed','true');
     document.getElementById('ageGate').style.display='none';
-  }else{
-    document.body.innerHTML=`
+  } else {
+    document.body.innerHTML = `
       <div style="
         min-height:100vh;
         display:flex;
         align-items:center;
         justify-content:center;
+        background:#100D0A;
+        color:#EDE2D3;
         text-align:center;
         padding:30px;
-        background:#100D0B;
-        color:#F5EBDD;
-        font-family:Arial;
+        font-family:Arial,sans-serif;
       ">
         <div>
           <h2>Access Restricted</h2>
@@ -630,10 +1058,17 @@ function confirmAge(isAdult){
       </div>
     `;
   }
+
 }
-if(sessionStorage.getItem('blazewoodAgeConfirmed')==='true'){
+
+if(sessionStorage.getItem('blazewoodAgeConfirmed')==='true') {
   document.getElementById('ageGate').style.display='none';
 }
+
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
 </script>
+
 </body>
 </html>
