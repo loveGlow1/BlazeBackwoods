@@ -1,845 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#17130F">
-<meta name="description" content="Blazewood Backwood Enterprise — Abuja, Nigeria.">
-<title>Blazewood — Backwood Enterprise</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find Blazewood backwood Enterprise kiosk on Paradise Road, Idogwari, Lifecamp, Abuja. Call for store hours and directions.">
+  <meta name="theme-color" content="#171512">
+  <title>Blazewood backwood Enterprise | Lifecamp, Abuja</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23171512'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23c59a62'%3EB%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blazewood backwood Enterprise | Lifecamp, Abuja">
+  <meta property="og:description" content="Find Blazewood backwood Enterprise kiosk on Paradise Road, Idogwari, Lifecamp, Abuja. Call for store hours and directions.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1200&h=630&q=80">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blazewood backwood Enterprise | Lifecamp, Abuja">
+  <meta name="twitter:description" content="Find Blazewood backwood Enterprise kiosk on Paradise Road, Idogwari, Lifecamp, Abuja. Call for store hours and directions.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1200&h=630&q=80">
+  <style>
+    :root {
+      --bg: #171512;
+      --surface: #211e19;
+      --surface-light: #29251f;
+      --gold: #c59a62;
+      --cream: #f1e8dc;
+      --muted: #b4a99a;
+      --line: rgba(241,232,220,.14);
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(var(--max), 90%); margin: 0 auto; }
+
+    .site-header {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(18,16,13,.38);
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 23px;
+      letter-spacing: .5px;
+      white-space: nowrap;
+    }
+    .brand span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a {
+      color: #e4d9ca;
+      font-size: 13px;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-call {
+      border: 1px solid var(--gold);
+      padding: 10px 17px;
+      color: var(--gold) !important;
+    }
+    .menu-toggle {
+      display: none;
+      border: 0;
+      color: var(--cream);
+      background: transparent;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 760px;
+      min-height: min(900px, 100svh);
+      display: flex;
+      align-items: center;
+      position: relative;
+      isolation: isolate;
+      background: #201b15;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image:
+        linear-gradient(90deg, rgba(15,13,11,.96) 0%, rgba(15,13,11,.82) 43%, rgba(15,13,11,.27) 100%),
+        linear-gradient(0deg, var(--bg) 0%, transparent 28%),
+        url("https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center 48%;
+    }
+    .hero-content { max-width: 690px; padding: 105px 0 70px; }
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    h1, h2, h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 400;
+    }
+    h1 {
+      font-size: clamp(48px, 7.5vw, 88px);
+      line-height: 1.04;
+      letter-spacing: -1.8px;
+      max-width: 680px;
+      margin-bottom: 24px;
+    }
+    h1 span { color: var(--gold); }
+    .hero-copy {
+      max-width: 490px;
+      color: #d0c5b6;
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; }
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      padding: 13px 21px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 11px;
+      font-weight: 700;
+      transition: .25s ease;
+    }
+    .button-primary { background: var(--gold); color: #1b1711; }
+    .button-primary:hover { background: #d8b27f; transform: translateY(-2px); }
+    .button-outline { border: 1px solid rgba(255,255,255,.48); color: var(--cream); }
+    .button-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    .quick-info {
+      background: #211e19;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .quick-item { padding: 25px 28px; border-right: 1px solid var(--line); }
+    .quick-item:first-child { padding-left: 0; }
+    .quick-item:last-child { border-right: 0; }
+    .quick-item small {
+      display: block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 9px;
+      margin-bottom: 5px;
+    }
+    .quick-item strong { font-size: 13px; font-weight: 500; }
+
+    .about {
+      padding: 110px 0;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 78px;
+      align-items: center;
+    }
+    .about-photo {
+      aspect-ratio: 3 / 4;
+      max-width: 320px;
+      background: #171512;
+      border: 1px solid var(--line);
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+    .about-copy h2, .location-copy h2 {
+      font-size: clamp(37px, 4.5vw, 55px);
+      line-height: 1.13;
+      margin-bottom: 20px;
+    }
+    .about-copy p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 14px 0;
+      max-width: 510px;
+    }
+    .about-copy .button { margin-top: 16px; }
+
+    .store-section { background: var(--surface); padding: 100px 0; }
+    .section-heading { text-align: center; max-width: 680px; margin: 0 auto 48px; }
+    .section-heading h2 { font-size: clamp(36px, 4.5vw, 54px); line-height: 1.15; }
+    .section-heading p { color: var(--muted); font-size: 14px; margin-top: 14px; }
+    .store-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 270px;
+      background: #171512;
+      border: 1px solid var(--line);
+    }
+    .store-feature-image {
+      min-height: 270px;
+      background: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80") center / cover no-repeat;
+    }
+    .store-feature-copy {
+      padding: clamp(28px, 5vw, 58px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .store-feature-copy h3 { font-size: 34px; margin-bottom: 14px; }
+    .store-feature-copy p { color: var(--muted); font-size: 14px; }
+
+    .visit { padding: 100px 0; text-align: center; }
+    .visit h2 { font-size: clamp(38px, 5vw, 58px); margin-bottom: 15px; }
+    .visit p { color: var(--muted); max-width: 590px; margin: 0 auto 26px; font-size: 14px; }
+
+    .location { padding: 95px 0; background: var(--surface); }
+    .location-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 58px;
+      align-items: center;
+    }
+    .detail { padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .detail small {
+      display: block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 9px;
+      margin-bottom: 5px;
+    }
+    .detail p { color: #ddd3c6; font-size: 14px; }
+    .map { min-height: 390px; background: #302a22; }
+    .map iframe { width: 100%; height: 390px; border: 0; }
+    .location-copy .button { margin-top: 25px; }
+
+    .contact { padding: 100px 20px; text-align: center; }
+    .contact h2 { font-size: clamp(38px, 5vw, 58px); margin-bottom: 12px; }
+    .contact p { color: var(--muted); margin-bottom: 25px; font-size: 14px; }
+    footer { border-top: 1px solid var(--line); padding: 27px 0; color: var(--muted); font-size: 11px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+    .contact-form { max-width: 480px; margin: 40px auto 0; text-align: left; display: grid; gap: 8px; }
+    .contact-form label { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 9px; margin-top: 8px; }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--cream);
+      font: inherit;
+      font-size: 14px;
+    }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--gold); }
+    .contact-form .button { margin-top: 14px; border: 0; cursor: pointer; }
+    .contact-form-note { color: var(--gold); margin-top: 12px; }
+
+    .chat-toggle {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 20;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .chat-panel {
+      position: fixed;
+      right: 20px;
+      bottom: 84px;
+      z-index: 20;
+      width: min(320px, calc(100% - 40px));
+      background: var(--surface);
+      border: 1px solid var(--gold);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .chat-panel[hidden] { display: none; }
+    .chat-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-bottom: 1px solid var(--line); font-size: 13px; }
+    .chat-head button { border: 0; background: transparent; color: var(--cream); font-size: 20px; cursor: pointer; }
+    .chat-log { padding: 12px; height: 240px; overflow-y: auto; display: grid; gap: 8px; align-content: start; font-size: 13px; }
+    .chat-msg { padding: 8px 11px; border-radius: 8px; max-width: 85%; }
+    .chat-msg.bot { background: var(--surface-light); color: var(--cream); justify-self: start; }
+    .chat-msg.user { background: var(--gold); color: #1b1711; justify-self: end; }
+    .chat-form { display: flex; border-top: 1px solid var(--line); }
+    .chat-form input { flex: 1; padding: 10px 12px; background: transparent; border: 0; color: var(--cream); font: inherit; font-size: 13px; }
+    .chat-form input:focus { outline: none; }
+    .chat-form button { border: 0; background: var(--gold); color: #1b1711; padding: 0 14px; cursor: pointer; font-size: 12px; }
+
+    .age-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(10,9,8,.97);
+    }
+    .age-box {
+      width: min(430px, 100%);
+      padding: 42px 28px;
+      text-align: center;
+      background: #201c17;
+      border: 1px solid var(--gold);
+    }
+    .age-box h2 { font-size: 34px; margin-bottom: 12px; }
+    .age-box p { color: var(--muted); font-size: 13px; margin-bottom: 22px; }
+    .age-actions { display: flex; justify-content: center; gap: 10px; }
+    .age-actions button {
+      padding: 12px 17px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #17130e;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .age-actions .decline { background: transparent; color: var(--cream); }
+
+    @media (max-width: 760px) {
+      .nav { height: 72px !important; }
+      .menu-toggle { display: block !important; }
+      .nav-links {
+        display: none !important;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        padding: 25px 5% !important;
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 20px !important;
+        background: #1b1814;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-links.open { display: flex !important; }
+      .hero { min-height: 720px !important; }
+      .hero::before { background-position: 56% center; }
+      .hero-content { padding-top: 100px; }
+      h1 { font-size: clamp(46px, 13vw, 65px) !important; }
+      .quick-grid { grid-template-columns: 1fr !important; }
+      .quick-item, .quick-item:first-child { padding: 17px 0 !important; border-right: 0; border-bottom: 1px solid var(--line); }
+      .quick-item:last-child { border-bottom: 0; }
+      .about, .location-grid { grid-template-columns: 1fr !important; gap: 35px !important; }
+      .about { padding: 75px 0 !important; }
+      .about-photo { min-height: 0 !important; }
+      .store-section, .location { padding: 75px 0 !important; }
+      .store-feature { grid-template-columns: 1fr !important; }
+      .store-feature-image { min-height: 0 !important; }
+      .map, .map iframe { min-height: 320px !important; height: 320px !important; }
+      .footer-row { flex-direction: column !important; text-align: center; }
+    }
+  </style>
+<style>/* Added automatically: grids collapse on a phone. The declarations above are
+   untouched — this applies only below 640px. */
+@media (max-width: 640px) {
+  .quick-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)) !important; }
+}</style>
 <style>
-:root {
-  --bg:#17130F;
-  --dark:#100D0A;
-  --panel:#211B16;
-  --brown:#493326;
-  --gold:#B99165;
-  --cream:#EDE2D3;
-  --muted:#A89A89;
-  --line:rgba(237,226,211,.13);
-  --max:1320px;
-}
-* {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-html {
-  scroll-behavior:smooth;
-}
-body {
-  background:var(--bg);
-  color:var(--cream);
-  font-family:'DM Sans',sans-serif;
-  overflow-x:hidden;
-}
-a {
-  color:inherit;
-  text-decoration:none;
-}
-button {
-  font:inherit;
-}
-img {
-  max-width:100%;
-  display:block;
-}
-.container {
-  width:min(var(--max),90%);
-  margin:auto;
-}
-/* ANNOUNCEMENT */
-.announcement {
-  background:#261D16;
-  text-align:center;
-  padding:10px;
-  font-size:10px;
-  letter-spacing:2.5px;
-  color:#D6B894;
-  text-transform:uppercase;
-}
-/* NAVIGATION */
-header {
-  position:absolute;
-  top:36px;
-  width:100%;
-  z-index:20;
-  border-bottom:1px solid rgba(255,255,255,.12);
-}
-nav {
-  height:85px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.brand {
-  font-family:'Playfair Display',serif;
-  font-size:25px;
-  letter-spacing:1px;
-}
-.brand span {
-  color:var(--gold);
-}
-.nav-links {
-  display:flex;
-  align-items:center;
-  gap:35px;
-}
-.nav-links a {
-  font-size:12px;
-  color:#E0D5C7;
-  transition:.3s;
-}
-.nav-links a:hover {
-  color:var(--gold);
-}
-.nav-contact {
-  border:1px solid var(--gold);
-  padding:12px 21px;
-  color:var(--gold)!important;
-}
-.menu-toggle {
-  display:none;
-  background:none;
-  border:0;
-  color:white;
-  font-size:28px;
-  cursor:pointer;
-}
-/* HERO */
-.hero {
-  min-height:850px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  isolation:isolate;
-}
-.hero::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-1;
-  background:
-    linear-gradient(90deg,
-      rgba(16,13,10,.98) 0%,
-      rgba(16,13,10,.84) 42%,
-      rgba(16,13,10,.18) 100%),
-    linear-gradient(0deg,var(--bg),transparent 30%),
-    url("https://cdn.ecommercedns.uk/files/7/252237/2/55390342/backwood-blue.jpg");
-  background-size:cover;
-  background-position:center 45%;
-  transform:scale(1.02);
-}
-.hero-content {
-  max-width:760px;
-  padding-top:120px;
-}
-.eyebrow {
-  color:var(--gold);
-  text-transform:uppercase;
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:4px;
-  margin-bottom:25px;
-}
-.hero h1 {
-  font-family:'Playfair Display',serif;
-  font-size:clamp(65px,9vw,115px);
-  font-weight:400;
-  line-height:.99;
-  letter-spacing:-3px;
-  margin-bottom:30px;
-}
-.hero h1 span {
-  color:var(--gold);
-  font-style:italic;
-}
-.hero-copy {
-  max-width:480px;
-  font-size:14px;
-  line-height:1.9;
-  color:#C6B9A9;
-  margin-bottom:38px;
-}
-.actions {
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-.btn {
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  padding:16px 26px;
-  min-height:52px;
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:1.7px;
-  text-transform:uppercase;
-  transition:.3s;
-}
-.btn-primary {
-  background:var(--gold);
-  color:#17110C;
-}
-.btn-primary:hover {
-  background:#D4B38D;
-  transform:translateY(-3px);
-}
-.btn-outline {
-  border:1px solid rgba(255,255,255,.4);
-}
-.btn-outline:hover {
-  border-color:var(--gold);
-  color:var(--gold);
-}
-/* BRAND STATEMENT */
-.statement {
-  padding:35px 0;
-  border-bottom:1px solid var(--line);
-  background:#1E1914;
-}
-.statement-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  text-align:center;
-}
-.statement-item {
-  border-right:1px solid var(--line);
-}
-.statement-item:last-child {
-  border:0;
-}
-.statement-item small {
-  display:block;
-  color:var(--gold);
-  font-size:9px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:7px;
-}
-.statement-item strong {
-  font-size:12px;
-  font-weight:400;
-}
-/* INTRODUCTION */
-.introduction {
-  padding:145px 0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:100px;
-}
-.intro-image {
-  position:relative;
-}
-.intro-image img {
-  width:100%;
-  height:580px;
-  object-fit:cover;
-}
-.intro-image::after {
-  content:"";
-  position:absolute;
-  inset:15px -15px -15px 15px;
-  border:1px solid rgba(185,145,101,.35);
-  z-index:-1;
-}
-.intro-copy h2 {
-  font-family:'Playfair Display',serif;
-  font-size:clamp(43px,5vw,70px);
-  line-height:1.12;
-  font-weight:400;
-  margin-bottom:28px;
-}
-.intro-copy h2 span {
-  color:var(--gold);
-  font-style:italic;
-}
-.intro-copy p {
-  font-size:14px;
-  line-height:2;
-  color:var(--muted);
-  margin-bottom:18px;
-}
-/* IMAGE BREAK */
-.image-break {
-  min-height:560px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
-  background:
-    linear-gradient(rgba(16,12,9,.60),rgba(16,12,9,.78)),
-    url("https://socaldistrollc.com/cdn/shop/files/DET_BK_5_800x.jpg?v=1785259674") center/cover;
-}
-.image-break-content {
-  max-width:700px;
-  padding:40px 20px;
-}
-.image-break h2 {
-  font-family:'Playfair Display',serif;
-  font-size:clamp(45px,7vw,85px);
-  font-weight:400;
-  line-height:1.1;
-  margin-bottom:22px;
-}
-.image-break h2 span {
-  color:var(--gold);
-  font-style:italic;
-}
-.image-break p {
-  color:#D3C5B5;
-  font-size:13px;
-  line-height:1.9;
-}
-/* BRAND GALLERY */
-.gallery-section {
-  padding:120px 0;
-  background:#211A15;
-}
-.section-heading {
-  text-align:center;
-  max-width:680px;
-  margin:0 auto 65px;
-}
-.section-heading h2 {
-  font-family:'Playfair Display',serif;
-  font-size:clamp(42px,5vw,65px);
-  font-weight:400;
-  margin-bottom:18px;
-}
-.section-heading p {
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.9;
-}
-.gallery {
-  display:grid;
-  grid-template-columns:1.35fr .65fr;
-  gap:20px;
-}
-.gallery-main {
-  height:560px;
-  overflow:hidden;
-  background:#30251C;
-}
-.gallery-main img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform .8s;
-}
-.gallery-main:hover img {
-  transform:scale(1.04);
-}
-.gallery-side {
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  padding:35px 10px 35px 35px;
-}
-.gallery-side h3 {
-  font-family:'Playfair Display',serif;
-  font-size:39px;
-  font-weight:400;
-  margin-bottom:20px;
-}
-.gallery-side p {
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.9;
-}
-.gallery-label {
-  color:var(--gold);
-  font-size:10px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:18px;
-}
-/* BRAND QUOTE */
-.brand-quote {
-  padding:130px 20px;
-  text-align:center;
-  background:var(--dark);
-}
-.brand-quote .eyebrow {
-  margin-bottom:30px;
-}
-.brand-quote h2 {
-  max-width:900px;
-  margin:auto;
-  font-family:'Playfair Display',serif;
-  font-size:clamp(35px,5.5vw,68px);
-  font-weight:400;
-  line-height:1.25;
-}
-.brand-quote h2 span {
-  color:var(--gold);
-  font-style:italic;
-}
-/* CONTACT */
-.contact {
-  padding:115px 0;
-  text-align:center;
-  background:
-    radial-gradient(ellipse at center,rgba(185,145,101,.13),transparent 70%);
-}
-.contact h2 {
-  font-family:'Playfair Display',serif;
-  font-size:clamp(43px,6vw,75px);
-  font-weight:400;
-  margin-bottom:20px;
-}
-.contact p {
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:32px;
-}
-.contact-details {
-  margin-top:35px;
-  color:var(--gold);
-  font-size:13px;
-}
-/* FOOTER */
-footer {
-  padding:35px 0;
-  border-top:1px solid var(--line);
-  background:#100D0A;
-}
-.footer-row {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-.footer-brand {
-  font-family:'Playfair Display',serif;
-  font-size:20px;
-}
-.footer-brand span {
-  color:var(--gold);
-}
-.footer-row p {
-  color:var(--muted);
-  font-size:11px;
-}
-/* AGE VERIFICATION */
-.age-gate {
-  position:fixed;
-  inset:0;
-  z-index:100;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  background:rgba(10,8,6,.97);
-}
-.age-box {
-  width:min(440px,100%);
-  padding:45px 30px;
-  text-align:center;
-  background:#211A15;
-  border:1px solid var(--gold);
-}
-.age-box h2 {
-  font-family:'Playfair Display',serif;
-  font-size:38px;
-  font-weight:400;
-  margin-bottom:15px;
-}
-.age-box p {
-  font-size:13px;
-  color:var(--muted);
-  margin-bottom:25px;
-}
-.age-actions {
-  display:flex;
-  justify-content:center;
-  gap:12px;
-}
-.age-actions button {
-  padding:13px 18px;
-  border:1px solid var(--gold);
-  background:var(--gold);
-  color:#17110C;
-  cursor:pointer;
-  font-size:11px;
-}
-.age-actions .decline {
-  background:transparent;
-  color:white;
-}
-/* RESPONSIVE */
-@media(max-width:850px) {
-  .introduction {
-    gap:55px;
-  }
-  .gallery {
-    grid-template-columns:1fr;
-  }
-  .gallery-side {
-    padding:30px 5px;
-    gap:25px;
-  }
-}
-@media(max-width:760px) {
-  header {
-    top:36px;
-  }
-  nav {
-    height:72px;
-  }
-  .menu-toggle {
-    display:block;
-  }
-  .nav-links {
-    display:none;
-    position:absolute;
-    top:72px;
-    left:0;
-    right:0;
-    padding:28px 5%;
-    background:#19130F;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:23px;
-  }
-  .nav-links.open {
-    display:flex;
-  }
-  .hero {
-    min-height:760px;
-  }
-  .hero::before {
-    background-position:58% center;
-  }
-  .hero h1 {
-    font-size:clamp(58px,13vw,85px);
-  }
-  .statement-grid {
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-  .statement-item {
-    border:0;
-  }
-  .introduction {
-    grid-template-columns:1fr;
-    padding:85px 0;
-    gap:55px;
-  }
-  .intro-image img {
-    height:400px;
-  }
-  .image-break {
-    min-height:430px;
-  }
-  .gallery-section {
-    padding:85px 0;
-  }
-  .gallery-main {
-    height:400px;
-  }
-  .brand-quote {
-    padding:90px 20px;
-  }
-  .contact {
-    padding:85px 0;
-  }
-  .footer-row {
-    flex-direction:column;
-    text-align:center;
-  }
-}
-@media(max-width:420px) {
-  .brand {
-    font-size:19px;
-  }
-  .hero h1 {
-    font-size:53px;
-  }
-  .actions {
-    flex-direction:column;
-  }
-  .actions .btn {
-    width:100%;
-  }
-  .gallery-main {
-    height:320px;
-  }
-  .age-actions {
-    flex-direction:column;
-  }
-}
-@media(prefers-reduced-motion:reduce) {
-  html {scroll-behavior:auto}
-  *,*::before,*::after {
-    animation:none!important;
-    transition:none!important;
-  }
-}
+/* Added automatically after the build: guards, not styling. Each one prevents a
+   specific way a page pushes itself off the side of a phone. */
+img, svg, video, canvas, iframe { max-width: 100%; }
+img, video { height: auto; }
+pre, code, table { max-width: 100%; }
+pre { overflow-x: auto; }
+h1, h2, h3, h4, p, li, a, td, th, dd, dt, figcaption, blockquote { overflow-wrap: break-word; }
 </style>
 </head>
 <body>
-<!-- AGE CONFIRMATION -->
-<div class="age-gate" id="ageGate">
-  <div class="age-box">
-    <div class="eyebrow">Age confirmation</div>
-    <h2>Welcome to Blazewood.</h2>
-    <p>This website relates to tobacco products. Confirm that you meet the applicable legal age requirement before continuing.</p>
-    <div class="age-actions">
-      <button onclick="confirmAge(true)">I meet the age requirement</button>
-      <button class="decline" onclick="confirmAge(false)">Exit</button>
-    </div>
-  </div>
-</div>
-<!-- ANNOUNCEMENT -->
-<div class="announcement">
-  BLAZEWOOD BACKWOOD ENTERPRISE · ABUJA, NIGERIA
-</div>
-<!-- NAVIGATION -->
-<header>
-  <div class="container">
-    <nav>
-      <a href="#home" class="brand">
-        BLAZEWOOD <span>BACKWOOD.</span>
-      </a>
-      <button class="menu-toggle"
-        onclick="toggleMenu()"
-        aria-label="Toggle navigation">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">Our Story</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-        <a href="tel:+2348168206369" class="nav-contact">Get In Touch</a>
-      </div>
-    </nav>
-  </div>
-</header>
-<main>
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow">
-        Blazewood Backwood Enterprise
-      </div>
-      <h1>
-        An Identity<br>
-        Beyond <span>Ordinary.</span>
-      </h1>
-      <p class="hero-copy">
-        Discover Blazewood Backwood Enterprise.
-        A distinctive retail brand based in Abuja,
-        Nigeria, bringing its own character and
-        visual identity to the retail experience.
-      </p>
-      <div class="actions">
-        <a href="#about" class="btn btn-primary">
-          Discover Blazewood
-        </a>
-        <a href="#contact" class="btn btn-outline">
-          Contact Us
-        </a>
+  <div class="age-gate" id="ageGate">
+    <div class="age-box">
+      <div class="eyebrow">Age confirmation</div>
+      <h2>Are you 18 or older?</h2>
+      <p>This store deals in tobacco products. Confirm that you are at least 18 years old to continue.</p>
+      <div class="age-actions">
+        <button type="button" onclick="confirmAge(true)">Yes, I am 18+</button>
+        <button type="button" class="decline" onclick="confirmAge(false)">No</button>
       </div>
     </div>
   </div>
-</section>
-<!-- BRAND INFORMATION -->
-<section class="statement">
-  <div class="container statement-grid">
-    <div class="statement-item">
-      <small>Established Identity</small>
-      <strong>Blazewood Enterprise</strong>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="#home">BLAZEWOOD <span>BACKWOOD</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" onclick="toggleMenu()">☰</button>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">The Kiosk</a>
+          <a href="#store">Store</a>
+          <a href="#location">Location</a>
+          <a class="nav-call" href="tel:+2348168206369">Call the shop</a>
+        </div>
+      </nav>
     </div>
-    <div class="statement-item">
-      <small>Based In</small>
-      <strong>Abuja, Nigeria</strong>
-    </div>
-    <div class="statement-item">
-      <small>Business Enquiries</small>
-      <strong>0816 820 6369</strong>
-    </div>
-  </div>
-</section>
-<!-- OUR STORY -->
-<section class="container introduction" id="about">
-  <div class="intro-image">
-    <img
-      src="https://cityhive-production-cdn.cityhive.net/product_details/69beec267ef5160e852fde93/primary_image/large.png?sig=71965ade7504add348bd19379929540fe30219e30f52ab14a7fb0ab739d65a47?format=square"
-      alt="Backwoods Honey Bourbon pack"
-      loading="lazy">
-  </div>
-  <div class="intro-copy">
-    <div class="eyebrow">The Blazewood Identity</div>
-    <h2>
-      Rooted in<br>
-      <span>Distinctive Style.</span>
-    </h2>
-    <p>
-      Blazewood Backwood Enterprise is an
-      Abuja-based retail business with a
-      distinctive identity and focus on
-      Backwoods-branded products.
-    </p>
-    <p>
-      Our website presents the brand,
-      its visual identity and business
-      information in one place.
-    </p>
-    <a href="#contact" class="btn btn-primary">
-      Get In Touch
-    </a>
-  </div>
-</section>
-<!-- CINEMATIC IMAGE SECTION -->
-<section class="image-break">
-  <div class="image-break-content">
-    <div class="eyebrow">
-      Blazewood · Abuja
-    </div>
-    <h2>
-      Character.<br>
-      Identity. <span>Presence.</span>
-    </h2>
-    <p>
-      Introducing the visual world of
-      Blazewood Backwood Enterprise.
-    </p>
-  </div>
-</section>
-<!-- GALLERY -->
-<section class="gallery-section" id="gallery">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Visual Collection</div>
-      <h2>The Blazewood Gallery</h2>
-      <p>
-        A closer look at the product packaging
-        associated with our business.
-      </p>
-    </div>
-    <div class="gallery">
-      <div class="gallery-main">
-        <img
-          src="https://www.sauttercigars.com/wp-content/uploads/2020/11/backwoods-authentic-8xP5-01.jpg"
-          alt="Backwoods authentic multi-pack packaging"
-          loading="lazy">
-      </div>
-      <div class="gallery-side">
-        <div>
-          <div class="gallery-label">
-            Blazewood Enterprise
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Tobacco Store · Idogwari, Abuja</div>
+          <h1>Blazewood backwood<br><span>Enterprise.</span></h1>
+          <p class="hero-copy">A local tobacco retail kiosk on Paradise Road, Idogwari. Find our location, view the shop and contact us directly for store information.</p>
+          <div class="actions">
+            <a class="button button-outline" href="#location" style="gap:10px;padding:13px 22px;background:var(--surface);border:1px solid var(--gold);border-radius:10px;color:var(--gold);"><span aria-hidden="true">📍</span><span>Find the kiosk</span></a>
+            <a class="button button-outline" href="tel:+2348168206369" aria-label="Tap to call the shop" style="gap:10px;padding:13px 22px;background:var(--surface);border:1px solid var(--gold);border-radius:10px;color:var(--gold);"><span aria-hidden="true">📞</span><span>Tap to call</span></a>
           </div>
-          <h3>
-            A closer look at our brand.
-          </h3>
-          <p>
-            Explore our visual presentation
-            and connect with our business
-            for general information.
-          </p>
-        </div>
-        <a href="#contact" class="btn btn-outline">
-          Business Information
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- BRAND STATEMENT -->
-<section class="brand-quote">
-  <div class="eyebrow">Blazewood Backwood Enterprise</div>
-  <h2>
-    A distinctive name.<br>
-    A memorable <span>identity.</span>
-  </h2>
-</section>
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="eyebrow">
-      Contact Blazewood
-    </div>
-    <h2>Let's Connect.</h2>
-    <p>
-      For general business enquiries,
-      contact our business directly.
-    </p>
-    <a href="tel:+2348168206369"
-       class="btn btn-primary">
-      Call 0816 820 6369
-    </a>
-    <div class="contact-details">
-      Paradise Road, Idogwari, Lifecamp,<br>
-      Abuja, Federal Capital Territory, Nigeria.
-    </div>
-  </div>
-</section>
-</main>
-<!-- FOOTER -->
-<footer>
-  <div class="container footer-row">
-    <div class="footer-brand">
-      BLAZEWOOD <span>BACKWOOD.</span>
-    </div>
-    <p>
-      Paradise Road, Lifecamp, Abuja.
-    </p>
-    <p>
-      © <span id="year"></span> Blazewood Backwood Enterprise.
-    </p>
-  </div>
-</footer>
-<script>
-function toggleMenu() {
-  document.getElementById('navLinks')
-    .classList.toggle('open');
-}
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navLinks')
-      .classList.remove('open');
-  });
-});
-function confirmAge(accepted) {
-  if (accepted) {
-    sessionStorage.setItem('blazewoodAgeConfirmed','true');
-    document.getElementById('ageGate').style.display='none';
-  } else {
-    document.body.innerHTML = `
-      <div style="
-        min-height:100vh;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        background:#100D0A;
-        color:#EDE2D3;
-        text-align:center;
-        padding:30px;
-        font-family:Arial,sans-serif;
-      ">
-        <div>
-          <h2>Access Restricted</h2>
-          <p>You must meet the applicable legal age requirement.</p>
         </div>
       </div>
-    `;
-  }
-}
-if(sessionStorage.getItem('blazewoodAgeConfirmed')==='true') {
-  document.getElementById('ageGate').style.display='none';
-}
-document.getElementById('year').textContent =
-  new Date().getFullYear();
-</script>
+    </section>
+
+    <section class="quick-info" aria-label="Business details">
+      <div class="container quick-grid">
+        <div class="quick-item"><small>Business type</small><strong>Tobacco shop</strong></div>
+        <div class="quick-item"><small>Location</small><strong>Idogwari, Lifecamp, Abuja</strong></div>
+        <div class="quick-item"><small>Opening</small><strong>Monday from 8:00 AM</strong></div>
+      </div>
+    </section>
+
+    <section class="container about" id="about">
+                <div class="about-photo" style="background:var(--surface);aspect-ratio:auto;"><img class="text-xs" data-focal="50% 50%" data-fit="contain" src="https://esuatccbicekcohzgcvd.supabase.co/storage/v1/object/public/project-assets/4aa716ff-b259-4589-8c31-7abd94159e63/f1b41922-e619-40ba-9bb0-86c669964a7c.png" alt="Backwoods Chocolate limited edition cigar pack sold at the kiosk" style="background:var(--surface);object-fit:contain;object-position:50% 50%;width:100%;height:auto;max-width:100%;display:block">
+</div>
+      <div class="about-copy">
+        <div class="eyebrow">The local kiosk</div>
+        <h2>A neighbourhood tobacco kiosk in Lifecamp.</h2>
+        <p>Located on Paradise Road, Idogwari, this small retail kiosk is listed as a tobacco shop and features Backwoods products among its displayed merchandise.</p>
+        <p>Use the contact number or map below to reach the shop and confirm current opening hours before visiting.</p>
+        <a class="button button-primary" href="#location">View store details</a>
+      </div>
+    </section>
+
+    <section class="store-section" id="store">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Inside the kiosk</div>
+          <h2>Backwoods at the store</h2>
+          <p>Photography of the actual kiosk and its displayed Backwoods-branded products, provided for this website.</p>
+        </div>
+        <div class="store-feature" style="grid-template-columns:1.05fr .95fr;gap:78px;background:transparent;border:0;min-height:0;">
+          <div class="store-feature-image" style="min-height:0;aspect-ratio:auto;max-width:320px;margin:0;background:var(--surface);border:1px solid var(--line);align-self:center;"><img src="https://esuatccbicekcohzgcvd.supabase.co/storage/v1/object/public/project-assets/4aa716ff-b259-4589-8c31-7abd94159e63/2f92bdc7-0b26-4a7d-ad75-de7fa7b907b2.png" alt="Backwoods Silver cigars pack" style="width:100%;height:auto;object-fit:contain;object-position:50% 50%;max-width:100%;display:block"></div>
+          <div class="store-feature-copy">
+            <div class="eyebrow">Store display</div>
+            <h3>Visit the physical kiosk</h3>
+            <p>The photographs show the shop as it appears at its listed location. For current stock and business hours, contact the shop directly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit">
+      <div class="container">
+        <div class="eyebrow">Find us in Abuja</div>
+        <h2>Right here in Idogwari.</h2>
+        <p>Visit the kiosk on Paradise Road, Lifecamp. Call ahead if you need help locating the shop or confirming when it is open.</p>
+        <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=39J8%2BCR%20Abuja" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </section>
+
+    <section class="location" id="location">
+      <div class="container location-grid">
+        <div class="location-copy">
+          <div class="eyebrow">Contact & location</div>
+          <h2>Come find the kiosk.</h2>
+          <div class="detail"><small>Address</small><p>Paradise Road, Idogwari, Lifecamp 900108, Federal Capital Territory, Abuja, Nigeria.</p></div>
+          <div class="detail"><small>Phone</small><p><a class="button button-primary" href="tel:+2348168206369">Call the shop</a></p><p style="margin-top:10px;"><a href="tel:+2348168206369">0816 820 6369</a></p></div>
+          <div class="detail"><small>Opening hours</small><p>Listed as opening at 8:00 AM on Monday. Please call to confirm the full weekly schedule.</p></div>
+          <div class="detail"><small>Google Maps plus code</small><p>39J8+CR Abuja</p></div>
+          <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=39J8%2BCR%20Abuja" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <div class="map">
+          <iframe title="Map for the kiosk location in Idogwari, Abuja" src="https://maps.google.com/maps?q=39J8%2BCR%20Abuja&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="eyebrow">Speak to the shop</div>
+      <h2>Need directions or store hours?</h2>
+      <p>Call the kiosk directly for general store information.</p>
+      <a class="button button-outline" href="tel:+2348168206369" aria-label="Tap to call the shop" style="gap:10px;padding:13px 22px;background:var(--surface);border:1px solid var(--gold);border-radius:10px;color:var(--gold);"><span aria-hidden="true">📞</span><span>Tap to call</span></a>
+      <form class="contact-form" action="#" method="post" onsubmit="return sendMessage(event)">
+        <label for="cfName">Name</label>
+        <input id="cfName" name="name" type="text" required autocomplete="name">
+        <label for="cfPhone">Phone or email</label>
+        <input id="cfPhone" name="contact" type="text" required autocomplete="email">
+        <label for="cfMessage">Message</label>
+        <textarea id="cfMessage" name="message" rows="4" required></textarea>
+        <button class="button button-primary" id="cfSubmit" type="submit">Send message</button>
+        <p class="contact-form-note" id="cfNote" hidden>Thanks — your message has been sent. The shop will get back to you.</p>
+      </form>
+    </section>
+  </main>
+
+  <button class="chat-toggle" type="button" aria-label="Open chat" onclick="toggleChat()">💬</button>
+  <div class="chat-panel" id="chatPanel" hidden>
+    <div class="chat-head"><strong>Blazewood assistant</strong><button type="button" aria-label="Close chat" onclick="toggleChat()">×</button></div>
+    <div class="chat-log" id="chatLog"><div class="chat-msg bot">Hi! Ask me about opening hours, location or how to reach the shop.</div></div>
+    <form class="chat-form" onsubmit="return chatSend(event)">
+      <input id="chatInput" type="text" placeholder="Type a question…" autocomplete="off">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    async function sendMessage(e) {
+      e.preventDefault();
+      var form = e.target;
+      var btn = document.getElementById('cfSubmit');
+      var note = document.getElementById('cfNote');
+      var name = document.getElementById('cfName').value.trim();
+      var contact = document.getElementById('cfPhone').value.trim();
+      var message = document.getElementById('cfMessage').value.trim();
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      note.hidden = true;
+      try {
+        var isEmail = contact.indexOf('@') > -1;
+        var res = await db.from('submissions').insert({
+          form: 'contact',
+          name: name || null,
+          email: isEmail ? contact : null,
+          message: message || null,
+          data: { phone: isEmail ? null : contact, contact: contact }
+        });
+        if (res.error) throw res.error;
+        form.reset();
+        form.innerHTML = '<p class="contact-form-note">Thanks — your message has been sent. The shop will get back to you.</p>';
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+        note.hidden = false;
+        note.textContent = 'Sorry, that did not send. Please try again.';
+      }
+      return false;
+    }
+
+    function toggleChat() {
+      var p = document.getElementById('chatPanel');
+      p.hidden = !p.hidden;
+      if (!p.hidden) document.getElementById('chatInput').focus();
+    }
+
+    function chatReply(q) {
+      q = q.toLowerCase();
+      if (/hour|open|time|close/.test(q)) return 'We are listed as opening at 8:00 AM on Monday. Please call 0816 820 6369 to confirm the full weekly schedule.';
+      if (/where|locat|address|map|direction|find/.test(q)) return 'The kiosk is on Paradise Road, Idogwari, Lifecamp, Abuja. Plus code 39J8+CR. Tap "Get directions" in the Location section.';
+      if (/phone|call|number|contact|reach/.test(q)) return 'You can call the shop on 0816 820 6369.';
+      if (/stock|product|backwood|cigar|price/.test(q)) return 'We stock Backwoods products. For current stock and prices, please call the shop directly.';
+      return 'I can help with opening hours, location and contact details. For anything else, call 0816 820 6369.';
+    }
+
+    function chatSend(e) {
+      e.preventDefault();
+      var input = document.getElementById('chatInput');
+      var text = input.value.trim();
+      if (!text) return false;
+      var log = document.getElementById('chatLog');
+      var u = document.createElement('div');
+      u.className = 'chat-msg user';
+      u.textContent = text;
+      log.appendChild(u);
+      var answer = chatReply(text);
+      var b = document.createElement('div');
+      b.className = 'chat-msg bot';
+      b.textContent = answer;
+      log.appendChild(b);
+      try {
+        var p = db.from('submissions').insert({
+          form: 'chat',
+          name: null,
+          email: null,
+          message: text,
+          data: { reply: answer, topic: 'Chat question' }
+        });
+        if (p && p.then) p.then(function () {}, function () {});
+      } catch (err) {}
+      log.scrollTop = log.scrollHeight;
+      input.value = '';
+      return false;
+    }
+
+    function confirmAge(isAdult) {
+      if (isAdult) {
+        document.getElementById('ageGate').style.display = 'none';
+      } else {
+        alert('You must be 18 or older to view this website.');
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const db = window.supabase.createClient("https://wrxbjqdyyxbteiedxdyj.supabase.co", "sb_publishable_o7yTsH3qFc8qNMfZli9EIw_GlffNvWV");
+  </script>
 </body>
 </html>
